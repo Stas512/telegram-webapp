@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <body>
+  <body style="background:#fff; color:#222;">
     <script>
-      document.body.innerHTML = `<pre>${window.Telegram.WebApp.initData}</pre>`;
+      if (window.Telegram && window.Telegram.WebApp) {
+        document.body.innerHTML = `<pre>${window.Telegram.WebApp.initData}</pre>`;
+      } else {
+        document.body.innerHTML = "<pre>Откройте через Telegram Web App</pre>";
+      }
     </script>
   </body>
 </html>
